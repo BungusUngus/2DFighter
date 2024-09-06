@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (waypoint1 == null)
+            return;
         //To figure out the direction you can subtract two positions together
         Vector2 direction = waypoint1.position - transform.position;
         //The vector might be quite long, normalize it to make it the length of 1
