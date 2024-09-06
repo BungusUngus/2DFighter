@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     private bool facingUp;
 
 
-
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -28,5 +27,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput.Normalize();
 
         rb2d.velocity = moveInput * moveSpeed;
+
     }
+
 }
