@@ -6,19 +6,23 @@ public class Enemy : MonoBehaviour
 {
     public Transform waypoint1;
     public float speed;
-
+  
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         if (waypoint1 == null)
+        {
+            waypoint1 = GameObject.FindGameObjectWithTag("Player").transform;
             return;
+        }
+
         //To figure out the direction you can subtract two positions together
         Vector2 direction = waypoint1.position - transform.position;
         //The vector might be quite long, normalize it to make it the length of 1
@@ -35,7 +39,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            Destroy(collision.gameObject); 
+            Destroy(collision.gameObject);
         }
     }
 }
