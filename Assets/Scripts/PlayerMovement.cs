@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private bool facingUp;
     Animator anim;
 
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+    
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -31,9 +35,31 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            anim.SetTrigger("Punch");
-        }
 
+            anim.SetTrigger("Punch");
+
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+        //Detection for enemies hit 
+       Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("We Hit " + enemy.name);
+            Destroy(enemy.gameObject);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
 }
