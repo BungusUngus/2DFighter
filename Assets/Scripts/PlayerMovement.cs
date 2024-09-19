@@ -9,10 +9,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private bool facingRight;
     private bool facingUp;
-
+    Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
@@ -27,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
         moveInput.Normalize();
 
         rb2d.velocity = moveInput * moveSpeed;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("Punch");
+        }
 
     }
 
