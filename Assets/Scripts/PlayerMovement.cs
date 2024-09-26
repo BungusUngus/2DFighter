@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb2d;
     private Vector2 moveInput;
     private bool facingRight;
-    private bool facingUp;
     Animator anim;
 
     public Transform attackPoint;
@@ -25,12 +24,17 @@ public class PlayerMovement : MonoBehaviour
     {
         float blend = Mathf.Pow(0.5f, Time.deltaTime * moveSpeed);
 
-
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
+        if ((moveInput.x > 0 && facingRight) || (moveInput.x < 0 && !facingRight))
+        {
+            facingRight = !facingRight;
+            transform.Rotate(new Vector3(0, 180, 0));
+        }
+
+
 
         moveInput.Normalize();
-
         rb2d.velocity = moveInput * moveSpeed;
 
         if (Input.GetKeyDown(KeyCode.Space))

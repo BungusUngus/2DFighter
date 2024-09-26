@@ -247,7 +247,7 @@ Transform:
   m_GameObject: {fileID: 105561979}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.10846559, y: -0.1595119, z: 0}
+  m_LocalPosition: {x: -0.10846559, y: -0.05, z: 0}
   m_LocalScale: {x: 32.638535, y: 0.35235673, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 150851976}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.037252214, z: -0, w: 0.99930596}
-  m_LocalPosition: {x: 12.67, y: -3.98, z: -0.14}
+  m_LocalPosition: {x: 2.05, y: -0.92, z: -0.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69dd35117c43a6419cc7f5280da1491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 6
   rb2d: {fileID: 429215176}
   attackPoint: {fileID: 2105860937}
   attackRange: 0.25
@@ -758,10 +758,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a50ee8c13ff46b43934b9ec727c30cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 4379062133114963152, guid: 14f7743cf3dd0364fbbbff66ebefe777, type: 3}
+  Enemy: {fileID: 1272286093897923688, guid: 5fd6dea3c8a1b0947847359b0b9a1d9d, type: 3}
   spawnPoint: {fileID: 150851977}
-  spawnCount: 5
-  spawnRate: 1
+  spawnCount: 3
+  spawnRate: 2
 --- !u!61 &511908613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -816,7 +816,7 @@ Transform:
   m_GameObject: {fileID: 511908611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.03, y: -2.05, z: -0.076862}
+  m_LocalPosition: {x: -11.88, y: -2.05, z: -0.076862}
   m_LocalScale: {x: 2.8052578, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1943,7 +1943,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946872005}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -54.68, y: 0.01240015, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2238,8 +2238,8 @@ SceneRoots:
   - {fileID: 1922799888}
   - {fileID: 174828481}
   - {fileID: 1658418532}
-  - {fileID: 429215178}
   - {fileID: 1917569354}
-  - {fileID: 1946872007}
   - {fileID: 2023047320}
   - {fileID: 2043148304}
+  - {fileID: 1946872007}
+  - {fileID: 429215178}
