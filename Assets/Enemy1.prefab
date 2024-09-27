@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint1: {fileID: 0}
-  speed: 1
+  speed: 2
 --- !u!70 &7329037025690873944
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

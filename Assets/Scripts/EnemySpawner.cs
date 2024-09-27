@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject Enemy;
+    public GameObject Enemy1;
     public float timer;
     public float resetTime;
     public float spawn;
@@ -39,6 +39,6 @@ public class EnemySpawner : MonoBehaviour
     void Spawn()
     {
         //int randomIndex = Random.Range(0, Enemy);
-        Instantiate(Enemy, transform.position, Quaternion.identity);
+        Instantiate(Enemy1, transform.position, Quaternion.identity);
     }
 }
